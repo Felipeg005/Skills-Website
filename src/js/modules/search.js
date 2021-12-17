@@ -1,5 +1,4 @@
 const toggleSearch = () => {
-  console.log('hi');
   const header = document.querySelector('.header');
   const searchContainer = document.querySelector('.search-bar-container');
   const searchBar = document.querySelector('.search-bar');

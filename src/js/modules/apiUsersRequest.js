@@ -5,6 +5,7 @@ const getUsers = async () => {
     method: 'POST'
   });
   const json = await response.json();
+  localStorage.setItem('usersData', JSON.stringify(json))
   return json;
 };
 
