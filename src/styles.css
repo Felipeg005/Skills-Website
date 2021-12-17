@@ -21,6 +21,7 @@ a {
 }
 
 @media (max-width: 998px) {
+  /* Header Section */
   .header {
     padding: 15px 0;
     width: 100%;
@@ -164,4 +165,52 @@ a {
     color: white;
     font-size: 10px;
   }
+
+  /* Main Section Search and Users */
+
+  .search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60vh;
+    background-color: transparent;
+  }
+
+  .search-bar {
+    margin-top: 30%;
+    width: 70%;
+    height: 60px;
+    outline: none;
+    border: none;
+    transition: 0.1s;
+  }
+
+  .search-bar-c {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .search-bar-container-c {
+    width: 100%;
+    height: 65px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    transition: 0.3s;
+  }
+
+  .users-container {
+    margin: 40px 20px;
+    padding: 0;
+  }
+
+  .user-container {
+    border: 1px solid white;
+  }
+}
+
+/* Default hide elements */
+.hidden {
+  display: none;
 }
