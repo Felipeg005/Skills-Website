@@ -1,4 +1,4 @@
-const navMenu = document.querySelector('.header');
+const navMenu = document.querySelector('.display-menu');
 const menuItems = document.querySelector('.menuitems');
 const lines = document.querySelector('.lines');
 const menuLine1 = document.querySelector('.line-1');
