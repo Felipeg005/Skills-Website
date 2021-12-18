@@ -12,7 +12,7 @@ header.addEventListener('click', toggleMenu);
 // Listener for search button in menu
 const searchButton = document.querySelector('.header-icon');
 searchButton.addEventListener('click', () => {
-  window.history.pushState('', '', `/`);
+  window.history.pushState('', '', `https://felipeg005.github.io/Skills-Website/`);
   location.reload();
 });
 
@@ -39,7 +39,7 @@ window.addEventListener('click', (e) => {
   }
   // Back from user
   if (elementClass === 'user-back' || elementClass === 'user-back-img') {
-    window.history.pushState('', '', `/`);
+    window.history.pushState('', '', `https://felipeg005.github.io/Skills-Website/`);
     location.reload();
   }
 });

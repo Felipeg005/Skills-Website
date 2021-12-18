@@ -43,7 +43,7 @@ const loadUserPage = (id) => {
       masterSkillContainer.innerHTML += `<li class="skill">${skill.name}</li>`
     }
   }
-  window.history.pushState('', '', `/${user.name}`);
+  window.history.pushState('', '', `https://felipeg005.github.io/${user.name}`);
 }
 
 export default loadUserPage;

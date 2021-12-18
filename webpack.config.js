@@ -7,6 +7,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: "https://felipeg005.github.io/Skills-Website/"
   },
   devServer: {
     static: './dist',
