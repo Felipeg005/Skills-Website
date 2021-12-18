@@ -1,13 +1,26 @@
 const displayUsers = (e) => {
+  const usersContainer = document.querySelector('.users-container');
   const usersData = JSON.parse(localStorage.getItem('usersData')).results;
-  console.log(e);
-  const userCardHtml = (
-  '<li class="user-container">' +
-    '<img class="user-photo" src="#" alt="user-photo">' +
-    '<h3 class="user-title">Username</h3>' +
-    '<p class="user-description">Here a description of the user</p>' +
-  '</li>'
-  );
+  const result = usersData.filter( (user) => {
+    if (user.name.toLowerCase().includes(e)) {
+      return user;
+    }
+  });
+  
+  usersContainer.innerHTML = '';
+  for (let i = 0; i < result.length; i += 1) {
+    const user = result[i];
+    const userCardHtml = (
+      `<li id="${user.subjectId}" class="user-container">` +
+        `<div class="frame"><img class="user-photo" src="${user.picture}" alt="user-photo"></div>` +
+        '<div class="user-info">' +
+        `<p class="user-title">${user.name}</p>` +
+        `<p class="user-description">${user.professionalHeadline}</p>` +
+        '</div>' +
+      '</li>'
+    );
+    usersContainer.innerHTML += userCardHtml;
+  }
 }
 
 export default displayUsers;
