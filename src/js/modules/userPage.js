@@ -1,4 +1,7 @@
 import toggleSearch from "./search";
+import masterIcon from "../../assets/img/icons/star-6-16.png"
+import proeficientIcon from "../../assets/img/icons/student-16.png"
+import noSkillIcon from "../../assets/img/icons/pacifier-2-16.png"
 
 const loadUserPage = (id) => {
   toggleSearch();
@@ -19,11 +22,11 @@ const loadUserPage = (id) => {
     `<div class="frame-big"><img class="user-photo-big" src="${user.picture}" alt="${user.name}-photo"></div>
     <h2 class="user-page-title">${user.name}</h2>
     <h3 class="user-page-subtitle">Skills and interests:</h3>
-    <h4 class="skill-title">Master / influencer</h4>
+    <div class="skill-title"><i class="icon"><img src="${masterIcon}" alt="icon"></i><h4>Master / influencer</h4></div>
     <ul class="master-skill-container"></ul>
-    <h4 class="skill-title">Proeficient</h4>
+    <div class="skill-title"><i class="icon"><img src="${proeficientIcon}" alt="icon"></i><h4>Proeficient</h4></div>
     <ul class="proeficient-skill-container"></ul>
-    <h4 class="skill-title">No experience, but interested</h4>
+    <div class="skill-title"><i class="icon"><img src="${noSkillIcon}" alt="icon"></i><h4>No experience, but interested</h4></div>
     <ul class="no-skill-container"></ul>`
   );
   userPage.innerHTML += userPageHtml;

@@ -13,9 +13,11 @@ header.addEventListener('click', toggleMenu);
 const searchButton = document.querySelector('.header-icon');
 searchButton.addEventListener('click', () => {location.reload()});
 
-// Animation for search bar
+// Animation for search bar and back button
 const searchBar = document.querySelector('.search-bar');
+const backButton = document.querySelector('.back-button');
 searchBar.addEventListener('click', toggleSearch);
+backButton.addEventListener('click', toggleSearch);
 
 // Get users information when loads page and store it
 window.addEventListener('DOMContentLoaded', getUsers())

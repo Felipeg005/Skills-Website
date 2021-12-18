@@ -180,6 +180,10 @@ a {
     background-color: transparent;
   }
 
+  .back-button {
+    margin: 0 60px 0 0;
+  }
+
   .search-bar {
     margin-top: 30%;
     width: 70%;
@@ -287,14 +291,17 @@ a {
 
   .skill-title,
   .user-page-subtitle {
+    display: flex;
     align-self: start;
     color: rgb(228, 228, 228);
     font-weight: normal;
     font-size: 16px;
+    align-items: center;
   }
 
   .user-page-subtitle {
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: normal;
   }
 
   .no-skill-container,
