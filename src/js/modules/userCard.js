@@ -2,7 +2,7 @@ const displayUsers = (e) => {
   const usersContainer = document.querySelector('.users-container');
   const usersData = JSON.parse(localStorage.getItem('usersData')).results;
   const result = usersData.filter( (user) => {
-    if (user.name.toLowerCase().includes(e)) {
+    if (user.name.toLowerCase().includes(e.toLowerCase())) {
       return user;
     }
   });
