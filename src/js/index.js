@@ -11,7 +11,10 @@ header.addEventListener('click', toggleMenu);
 
 // Listener for search button in menu
 const searchButton = document.querySelector('.header-icon');
-searchButton.addEventListener('click', () => {location.reload()});
+searchButton.addEventListener('click', () => {
+  window.history.pushState('', '', `/`);
+  location.reload();
+});
 
 // Animation for search bar and back button
 const searchBar = document.querySelector('.search-bar');
@@ -31,7 +34,12 @@ input.addEventListener('keypress', (e) => {
 // listen when click on user card
 window.addEventListener('click', (e) => {
   const elementClass = e.target.className
-  if(elementClass === 'user-container' || elementClass === 'user-description' || elementClass === 'user-title'|| elementClass === 'user-photo' || elementClass === 'user-info') {
+  if (elementClass === 'user-container' || elementClass === 'user-description' || elementClass === 'user-title'|| elementClass === 'user-photo' || elementClass === 'user-info') {
     loadUserPage(e.target.id)
+  }
+  // Back from user
+  if (elementClass === 'user-back' || elementClass === 'user-back-img') {
+    window.history.pushState('', '', `/`);
+    location.reload();
   }
 });
