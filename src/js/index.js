@@ -3,10 +3,15 @@ import getUsers from './modules/apiUsersRequest';
 import toggleMenu from './modules/navBar';
 import toggleSearch from './modules/search';
 import displayUsers from './modules/userCard';
+import loadUserPage from './modules/userPage';
 
 // Listener for nav bar
 const header = document.querySelector('.nav-button');
 header.addEventListener('click', toggleMenu);
+
+// Listener for search button in menu
+const searchButton = document.querySelector('.header-icon');
+searchButton.addEventListener('click', () => {location.reload()});
 
 // Animation for search bar
 const searchBar = document.querySelector('.search-bar');
@@ -19,4 +24,12 @@ window.addEventListener('DOMContentLoaded', getUsers())
 const input = document.getElementById('search-bar-input');
 input.addEventListener('keypress', (e) => {
   displayUsers(e.target.value);
+});
+
+// listen when click on user card
+window.addEventListener('click', (e) => {
+  const elementClass = e.target.className
+  if(elementClass === 'user-container' || elementClass === 'user-description' || elementClass === 'user-title'|| elementClass === 'user-photo' || elementClass === 'user-info') {
+    loadUserPage(e.target.id)
+  }
 });

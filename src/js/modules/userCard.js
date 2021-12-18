@@ -12,10 +12,10 @@ const displayUsers = (e) => {
     const user = result[i];
     const userCardHtml = (
       `<li id="${user.subjectId}" class="user-container">` +
-        `<div class="frame"><img class="user-photo" src="${user.picture}" alt="user-photo"></div>` +
-        '<div class="user-info">' +
-        `<p class="user-title">${user.name}</p>` +
-        `<p class="user-description">${user.professionalHeadline}</p>` +
+        `<div id="${user.subjectId}" class="frame"><img class="user-photo" src="${user.picture}" alt="user-photo"></div>` +
+        `<div id="${user.subjectId}" class="user-info">` +
+        `<p id="${user.subjectId}" class="user-title">${user.name}</p>` +
+        `<p id="${user.subjectId}" class="user-description">${user.professionalHeadline}</p>` +
         '</div>' +
       '</li>'
     );
