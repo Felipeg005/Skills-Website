@@ -225,7 +225,8 @@ a {
     font-size: 17px;
   }
 
-  .frame {
+  .frame,
+  .frame-big {
     display: flex;
     border-color: #666;
     border-image: none;
@@ -240,11 +241,22 @@ a {
     transform: rotate(-45deg)
   }
 
-  .user-photo {
+  .user-photo,
+  .user-photo-big {
     margin: 0 15px 0 15px;
     height: 70px;
     width: 70px;
     transform: rotate(45deg)
+  }
+
+  .frame-big {
+    height: 250px;
+    width: 250px;
+  }
+
+  .user-photo-big {
+    height: 320px;
+    width: 320px;
   }
 
   .user-info {
@@ -257,6 +269,53 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 400px;
+  }
+
+  /* Main Section Search and Users */
+  .user-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .user-page-title {
+    margin: 60px 0;
+    text-align: center;
+    color: rgb(228, 228, 228);
+  }
+
+  .skill-title,
+  .user-page-subtitle {
+    align-self: start;
+    color: rgb(228, 228, 228);
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .user-page-subtitle {
+    font-size: 18px;
+  }
+
+  .no-skill-container,
+  .proeficient-skill-container,
+  .master-skill-container {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .skill {
+    color: rgb(228, 228, 228);
+    font-size: 13px;
+    padding: 5px 15px;
+    margin: 10px;
+    background-color: #373a41;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: fit-content;
   }
 }
 

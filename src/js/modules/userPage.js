@@ -16,18 +16,15 @@ const loadUserPage = (id) => {
   });
   const user = result[0];
   const userPageHtml = (
-    `<img src="${user.picture}" alt="${user.name}-photo">
+    `<div class="frame-big"><img class="user-photo-big" src="${user.picture}" alt="${user.name}-photo"></div>
     <h2 class="user-page-title">${user.name}</h2>
     <h3 class="user-page-subtitle">Skills and interests:</h3>
-    <ul class="master-skill-container">
-      <h4 class="skill-title">Master / influencer</h4>
-    </ul>
-    <ul class="proeficient-skill-container">
-      <h4 class="skill-title">Proeficient</h4>
-    </ul>
-    <ul class="no-skill-container">
-      <h4 class="skill-title">No experience, but interested</h4>
-    </ul>`
+    <h4 class="skill-title">Master / influencer</h4>
+    <ul class="master-skill-container"></ul>
+    <h4 class="skill-title">Proeficient</h4>
+    <ul class="proeficient-skill-container"></ul>
+    <h4 class="skill-title">No experience, but interested</h4>
+    <ul class="no-skill-container"></ul>`
   );
   userPage.innerHTML += userPageHtml;
   for (let i = 0; i < user.skills.length; i += 1) {
