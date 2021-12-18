@@ -1,6 +1,6 @@
 ## Skills Website
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot1.png)
 
 ## Live Demo
 
